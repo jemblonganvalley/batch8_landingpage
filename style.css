@@ -1,5 +1,8 @@
 /* CSS RESETER */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Staatliches&display=swap');
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -16,7 +19,7 @@ body{
     margin: 0;
     overflow-x: hidden;
     background-color: whitesmoke;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 p{
@@ -28,3 +31,13 @@ a{
     text-decoration: none;
 }
 
+.navbar{
+    width: 100vw;
+    height: 70px;
+    padding: 0 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
+}
