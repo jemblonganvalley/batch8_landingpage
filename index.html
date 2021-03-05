@@ -16,7 +16,6 @@
 <body>
 
     <!--NAVBAR-->
-
     <nav class="navbar">
         <h3 class="brand">FADLISELAZ</h3>
 
@@ -37,10 +36,77 @@
                 <a href="#gallery">gallery</a>
             </li>
         </ul>
-    </nav>
 
+        <span class="material-icons" id="menu_icon" onclick="showMobileMenu()">
+            menu
+        </span>
+
+
+    </nav>
     <!--END NAVBAR-->
 
+    <!--Mobile Menu-->
+
+    <div class="mobile_menu" id="mobile_menu">
+
+        <div class="mobile_menu_item">
+            <a href="#home">home</a>
+        </div>
+
+        <div class="mobile_menu_item">
+            <a href="#about">about</a>
+        </div>
+
+        <div class="mobile_menu_item">
+            <a href="#contact">contact</a>
+        </div>
+
+        <div class="mobile_menu_item">
+            <a href="#gallery">gallery</a>
+        </div>
+
+    </div>
+
+    <!--END Mobile Menu-->
+
+
+
+    <script>
+
+        //tangkap element mobile menu
+        var mobileMenu = document.getElementById('mobile_menu');
+
+        //check apakah element berhasil di tangkap
+        console.log(mobileMenu);
+
+        var show = true
+
+        // kita buat function untuk mengontrol mobile menu
+        function showMobileMenu() {
+
+            //kita lihat kondisi show
+            if (show === true) {
+                //mengontrol style mobileMenu
+                mobileMenu.style.transform = 'translateX(0px)'
+
+                //kita ubah show menjadi true
+                show = false
+            } else {
+                //mengontrol style mobileMenu
+                mobileMenu.style.transform = 'translateX(140px)'
+
+                //kita ubah show menjadi true
+                show = true
+            }
+
+            // console.log(show)
+
+        }
+
+        //menjalankan function yang sudah kita buat
+        // showMobileMenu()
+
+    </script>
 
 
 </body>

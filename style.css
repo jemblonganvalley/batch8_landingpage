@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Staatliches&display=swap');
 
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 html{
     scroll-behavior: smooth;
@@ -39,5 +40,81 @@ a{
     justify-content: flex-start;
     align-items: center;
     background-color: whitesmoke;
-    box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
+    box-shadow: 2px 5px 8px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    left: 0;
 }
+
+.brand{
+    font-family: 'Staatliches', sans-serif;
+    font-size: 2rem;
+    color: orange;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu{
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    text-transform: uppercase;
+    margin-left: auto;
+}
+
+.menu_item:hover{
+    color: orange;
+}
+
+#menu_icon{
+    display: none;
+}
+
+.mobile_menu{
+    display: none;
+}
+
+
+/* KONDISI KETIKA SCREEN DI BAWAH 600px */
+@media only screen and (max-width : 600px){
+
+    .navbar{
+        padding: 0 5%;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    #menu_icon{
+        display: flex;
+        margin-left: auto;
+        font-size: 2rem;
+        user-select: none;
+        color: grey;
+    }
+
+    .mobile_menu{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        gap: 40px;
+        padding: 20px;
+        background-color: orange;
+        color: white;
+        border-radius: 0 0 0 20px;
+        transition-duration: .5s;
+        transform: translateX(140px);
+    }
+
+    .mobile_menu_item{
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        text-align: right;
+    }
+
+
+}
+
