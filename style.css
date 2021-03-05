@@ -87,6 +87,56 @@ a {
   border-radius: 100px;
 }
 
+.sub_modal {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: orange;
+  z-index: 300;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub_modal span {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  user-select: none;
+  cursor: pointer;
+  background-color: blueviolet;
+  color: white;
+  padding: 5px;
+  border-radius: 100px;
+}
+
+#sub_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#email,
+#submit_button {
+  width: 250px;
+  height: 35px;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  border-radius: 100px;
+  font-family: inherit;
+  text-align: center;
+}
+
+#submit_button {
+  background-color: blueviolet;
+  color: white;
+  text-transform: uppercase;
+}
+
 /* KONDISI KETIKA SCREEN DI BAWAH 600px */
 @media only screen and (max-width: 600px) {
   .navbar {
@@ -129,5 +179,21 @@ a {
   #mail_icon {
     right: 5%;
     bottom: 30px;
+  }
+
+  .sub_modal span {
+    right: 20px;
+    top: 20px;
+  }
+
+  .sub_title {
+    text-align: center;
+    max-width: 300px;
+  }
+
+  #email,
+  #submit_button {
+    width: 300px;
+    height: 40px;
   }
 }

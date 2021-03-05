@@ -62,10 +62,25 @@
     <!--END Mobile Menu-->
 
     <!--FLYING BUTTON-->
-
-    <span class="material-icons" id="mail_icon"> mail_outline </span>
-
+    <span class="material-icons" id="mail_icon" onclick="showModal()">
+      mail_outline
+    </span>
     <!--END FLYING BUTTON-->
+
+    <!--SUBSCRIBE MODAL-->
+
+    <div class="sub_modal" id="sub_modal">
+      <span class="material-icons" onclick="hideModal()"> close </span>
+
+      <h1 class="sub_title">dapatkan info terbaru dari kami..</h1>
+
+      <form action="" id="sub_form">
+        <input type="email" placeholder="masukan email kamu" id="email" />
+        <button type="submit" id="submit_button">subscribe</button>
+      </form>
+    </div>
+
+    <!--END SUBSCRIBE MODAL-->
 
     <script>
       //tangkap element mobile menu
@@ -96,8 +111,23 @@
         // console.log(show)
       }
 
-      //menjalankan function yang sudah kita buat
-      // showMobileMenu()
+      //function untuk menampilkan sub modal
+      function showModal() {
+        //menangkap element sub_modal
+        var subModal = document.getElementById("sub_modal");
+
+        //kita atur styling dari submodal ini
+        subModal.style.display = "flex";
+      }
+
+      //function untuk menyembunyikan sub modal
+      function hideModal() {
+        //menangkap element sub_modal
+        var subModal = document.getElementById("sub_modal");
+
+        //kita atur styling dari submodal ini
+        subModal.style.display = "none";
+      }
     </script>
   </body>
 </html>
