@@ -1,114 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Website landing page fadliselaz">
-    <link rel="icon" href="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Website landing page fadliselaz" />
+    <link rel="icon" href="" />
     <meta name="og:image" content="https://picsum.photos/seed/150/300" />
     <meta name="og:description" content="website landing page fadliselaz" />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <title>Landing Page</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!--NAVBAR-->
     <nav class="navbar">
-        <h3 class="brand">FADLISELAZ</h3>
+      <h3 class="brand">FADLISELAZ</h3>
 
-        <ul class="menu">
-            <li class="menu_item">
-                <a href="#home">home</a>
-            </li>
+      <ul class="menu">
+        <li class="menu_item">
+          <a href="#home">home</a>
+        </li>
 
-            <li class="menu_item">
-                <a href="#about">about</a>
-            </li>
+        <li class="menu_item">
+          <a href="#about">about</a>
+        </li>
 
-            <li class="menu_item">
-                <a href="#contact">contact</a>
-            </li>
+        <li class="menu_item">
+          <a href="#contact">contact</a>
+        </li>
 
-            <li class="menu_item">
-                <a href="#gallery">gallery</a>
-            </li>
-        </ul>
+        <li class="menu_item">
+          <a href="#gallery">gallery</a>
+        </li>
+      </ul>
 
-        <span class="material-icons" id="menu_icon" onclick="showMobileMenu()">
-            menu
-        </span>
-
-
+      <span class="material-icons" id="menu_icon" onclick="showMobileMenu()">
+        menu
+      </span>
     </nav>
     <!--END NAVBAR-->
 
     <!--Mobile Menu-->
-
     <div class="mobile_menu" id="mobile_menu">
+      <div class="mobile_menu_item">
+        <a href="#home">home</a>
+      </div>
 
-        <div class="mobile_menu_item">
-            <a href="#home">home</a>
-        </div>
+      <div class="mobile_menu_item">
+        <a href="#about">about</a>
+      </div>
 
-        <div class="mobile_menu_item">
-            <a href="#about">about</a>
-        </div>
+      <div class="mobile_menu_item">
+        <a href="#contact">contact</a>
+      </div>
 
-        <div class="mobile_menu_item">
-            <a href="#contact">contact</a>
-        </div>
-
-        <div class="mobile_menu_item">
-            <a href="#gallery">gallery</a>
-        </div>
-
+      <div class="mobile_menu_item">
+        <a href="#gallery">gallery</a>
+      </div>
     </div>
-
     <!--END Mobile Menu-->
 
+    <!--FLYING BUTTON-->
 
+    <span class="material-icons" id="mail_icon"> mail_outline </span>
+
+    <!--END FLYING BUTTON-->
 
     <script>
+      //tangkap element mobile menu
+      var mobileMenu = document.getElementById("mobile_menu");
 
-        //tangkap element mobile menu
-        var mobileMenu = document.getElementById('mobile_menu');
+      //check apakah element berhasil di tangkap
+      console.log(mobileMenu);
 
-        //check apakah element berhasil di tangkap
-        console.log(mobileMenu);
+      var show = true;
 
-        var show = true
+      // kita buat function untuk mengontrol mobile menu
+      function showMobileMenu() {
+        //kita lihat kondisi show
+        if (show === true) {
+          //mengontrol style mobileMenu
+          mobileMenu.style.transform = "translateX(0px)";
 
-        // kita buat function untuk mengontrol mobile menu
-        function showMobileMenu() {
+          //kita ubah show menjadi true
+          show = false;
+        } else {
+          //mengontrol style mobileMenu
+          mobileMenu.style.transform = "translateX(140px)";
 
-            //kita lihat kondisi show
-            if (show === true) {
-                //mengontrol style mobileMenu
-                mobileMenu.style.transform = 'translateX(0px)'
-
-                //kita ubah show menjadi true
-                show = false
-            } else {
-                //mengontrol style mobileMenu
-                mobileMenu.style.transform = 'translateX(140px)'
-
-                //kita ubah show menjadi true
-                show = true
-            }
-
-            // console.log(show)
-
+          //kita ubah show menjadi true
+          show = true;
         }
 
-        //menjalankan function yang sudah kita buat
-        // showMobileMenu()
+        // console.log(show)
+      }
 
+      //menjalankan function yang sudah kita buat
+      // showMobileMenu()
     </script>
-
-
-</body>
-
+  </body>
 </html>
